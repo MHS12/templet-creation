@@ -3,6 +3,10 @@ import html2pdf from "html2pdf.js";
 import Box from "./Box";
 
 const ViewCompo = () => {
+  const A4_Page_Layout = {
+    width: "210mm",
+    height: "297mm",
+  };
   const [boxes, setBoxes] = useState([]);
   const printRef = useRef(null);
 
@@ -23,6 +27,7 @@ const ViewCompo = () => {
     html2pdf().from(element).set(options).save();
   };
 
+  
   return (
     <div className="flex flex-col items-center mx-auto gap-4 p-6 min-h-screen">
       <div className="flex gap-2">
@@ -42,14 +47,12 @@ const ViewCompo = () => {
       <div
         className=" p-4 rounded-md mx-auto shadow-md border"
         style={{
-          width: "210mm",
-          height: "297mm",
-          overflowY: "auto",
-          position: "relative",
+          ...A4_Page_Layout,
         }}
       >
         <h1 className="text-center text-xl font-bold mb-4">A4 Page Preview</h1>
-        <div ref={printRef} className="border p-3  min-h-[250mm]">
+
+        <div ref={printRef} className="min-h-[250mm] bg-white">
           {boxes.map((_, index) => (
             <Box key={index} index={index} />
           ))}
