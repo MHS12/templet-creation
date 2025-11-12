@@ -1,9 +1,9 @@
 import React from "react";
-import EditViewCompo from "./components/EditViewCompo";
+import TempletGenreate from "./components2/TempletGenreate";
 function App() {
   return (
-    <div className="bg-slate-400 p-2">
-      <EditViewCompo />
+    <div className="p-2">
+     <TempletGenreate/>
     </div>
   );
 }
