@@ -1,0 +1,19 @@
+{
+  "pageSizes": {
+    "A4": { "width": 794, "height": 1123 },
+    "A3": { "width": 1123, "height": 1587 },
+    "Letter": { "width": 816, "height": 1056 },
+    "Legal": { "width": 816, "height": 1344 }
+  },
+  "defaultMargins": {
+    "top": 10,
+    "right": 10,
+    "bottom": 10,
+    "left": 10
+  },
+  "defaultPageType": "A4",
+  "defaultOrientation": "portrait",
+  "defaultZoom": 0.9,
+  "maxMargins": { "top": 300, "right": 300, "bottom": 300, "left": 300 }
+  
+}
